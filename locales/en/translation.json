@@ -1,0 +1,20 @@
+{
+  "nodata": "(No Data)",
+  "noMoreTrainsTo": "There's no more trains today. See you tomorrow :)",
+  "noMoreTrainsStation": "There's no trains departing from this station today",
+  "arrivesAt": "Arrives at",
+  "arrivedAt": "Arrived at",
+  "departsAt": "Departs at",
+  "departedAt": "Departed at",
+  "trainInfo": "Train Information",
+  "chooseStationFrom": "Choose from",
+  "fromKMITL": "From KMITL",
+  "toKMITL": "To KMITL",
+  "table": {
+    "number": "Number",
+    "fromTo": "From → To",
+    "arrives": "Arrives",
+    "delay": "Delay"
+  },
+  "footer": "KMITL - BKK is not affiliated with KMITL, SRT or any other organization. All rights and used trademarks belongs to their respective owners. All information used here is accessible via public api's. ©\uFE0FKMITL - BKK, 42Bangkok ddivaev"
+}

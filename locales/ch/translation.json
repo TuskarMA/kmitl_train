@@ -1,0 +1,20 @@
+{
+  "nodata": "(没有数据)",
+  "noMoreTrainsTo": "今天没有更多的列车了。明天见 :)",
+  "noMoreTrainsStation": "今天没有从此车站出发的列车",
+  "arrivesAt": "到达时间",
+  "arrivedAt": "到达时间",
+  "departsAt": "出发时间",
+  "departedAt": "已出发时间",
+  "trainInfo": "列车信息",
+  "chooseStationFrom": "从哪里选择",
+  "fromKMITL": "来自 KMITL",
+  "toKMITL": "前往 KMITL",
+  "table": {
+    "number": "编号",
+    "fromTo": "从 → 到",
+    "arrives": "到达",
+    "delay": "延迟"
+  },
+  "footer": "KMITL - BKK 与 KMITL、SRT 或任何其他组织无关。所有权利和使用的商标属于其各自的所有者。所有在此使用的信息均可通过公共 API 访问。© KMITL - BKK, 42Bangkok ddivaev"
+}

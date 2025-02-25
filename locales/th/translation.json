@@ -1,0 +1,20 @@
+{
+  "nodata": "(ไม่มีข้อมูล)",
+  "noMoreTrainsTo": "ไม่มีรถไฟเพิ่มเติมในวันนี้ พบกันใหม่พรุ่งนี้ :)",
+  "noMoreTrainsStation": "วันนี้ไม่มีรถไฟออกจากสถานีนี้",
+  "arrivesAt": "มาถึงที่",
+  "arrivedAt": "มาถึงที่แล้ว",
+  "departsAt": "ออกจากที่",
+  "departedAt": "ออกจากที่แล้ว",
+  "trainInfo": "ข้อมูลรถไฟ",
+  "chooseStationFrom": "เลือกจาก",
+  "fromKMITL": "จาก KMITL",
+  "toKMITL": "ถึง KMITL",
+  "table": {
+    "number": "หมายเลข",
+    "fromTo": "จาก → ถึง",
+    "arrives": "มาถึง",
+    "delay": "ดีเลย์"
+  },
+  "footer": "KMITL - BKK ไม่เกี่ยวข้องกับ KMITL, SRT หรือองค์กรใด ๆ ทั้งสิ้น สัญญาณทางการค้าทั้งหมดเป็นทรัพย์สินของเจ้าของที่เกี่ยวข้อง ข้อมูลทั้งหมดที่ใช้ที่นี่สามารถเข้าถึงได้ผ่าน API สาธารณะ ©\uFE0F KMITL - BKK, 42Bangkok ddivaev"
+}
