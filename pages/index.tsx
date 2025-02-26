@@ -105,12 +105,12 @@ export default function MobileNavbar() {
             setTrainData(response.data.data);
 
 
-            if(!trainData) return;
+            // if(!trainData) return;
             const index = response.data.data.right.findIndex((trainData) => trainData.current === 1);
 
             if (index !== -1 && index !== response.data.data.right.length - 1) {
                 intervalRef.current = setInterval(() => {
-                    setActiveIndex((prevIndex) => (prevIndex === index ? index - 1 : index));
+                    setActiveIndex((prevIndex) => (prevIndex === index ? index + 1 : index));
                 }, 600); // 0.6 секунды
             } else {
                 setActiveIndex(index);
@@ -164,45 +164,46 @@ export default function MobileNavbar() {
                             }>
                                 {/* Отображение времени прибытия */}
                                 {
-                                    trainObject?.arrlate === 'n/a' || trainObject?.arrlate === 0 ? (
+                                    (!trainObject?.actarr || trainObject.actarr === 'n/a') && trainObject?.arrive !== "0" ? ( // Hide if arrive === "0"
                                         trainObject?.arrive !== '-' && (
-                                            <Text size="xs" c={trainObject?.actarr === 'n/a' && trainObject?.actdep === 'n/a' ? "default" : "green"}>
+                                            <Text size="xs" c={(!trainObject?.actarr && !trainObject?.actdep) ? "default" : "green"}>
                                                 {trainObject.passyet === '1' ? t('arrivedAt') : t('arrivesAt')} {trainObject?.arrive}
-                                                {trainObject?.actarr === 'n/a' && trainObject?.actdep === 'n/a' && ' ' + t('nodata')}
+                                                {!trainObject?.actarr && !trainObject?.actdep && ' ' + t('nodata')}
                                             </Text>
                                         )
                                     ) : (
-                                        trainObject?.actarr !== '-' && (
+                                        trainObject?.actarr !== '-' && trainObject?.arrive !== "0" && ( // Hide if arrive === "0"
                                             <Text size="xs" c="#ff0000">
-
                                                 {trainObject.passyet === '1' ? t('arrivedAt') : t('arrivesAt')} {trainObject?.actarr}
                                                 <span style={{ fontSize: "0.9em" }}>
-                                                    {trainObject.arrlate < 0 ? '(' + trainObject.arrlate + ')' : null}
-                                                    {trainObject.arrlate > 0 ? '(+' + trainObject.arrlate + ')' : null}
+          {trainObject.arrlate < 0 ? `(${trainObject.arrlate})` : null}
+                                                    {trainObject.arrlate > 0 ? `(+${trainObject.arrlate})` : null}
+        </span>
+                                            </Text>
+                                        )
+                                    )
+                                }
 
-                                                </span>
+                                {/* Отображение времени отправления */}
+                                {
+                                    (!trainObject?.actdep || trainObject.actdep === 'n/a') && trainObject?.depart !== "0" ? ( // Hide if depart === "0"
+                                        trainObject?.depart !== '-' && (
+                                            <Text size="xs" c={(!trainObject?.actarr && !trainObject?.actdep) ? "default" : "green"}>
+                                                {trainObject.passyet === '1' ? t('departedAt') : t('departsAt')} {trainObject?.depart}
+                                                {!trainObject?.actarr && !trainObject?.actdep && ' ' + t('nodata')}
+                                            </Text>
+                                        )
+                                    ) : (
+                                        trainObject?.actdep !== '-' && trainObject?.depart !== "0" && ( // Hide if depart === "0"
+                                            <Text size="xs" c="#ff0000">
+                                                {trainObject.passyet === '1' ? t('departedAt') : t('departsAt')} {trainObject?.actdep}
+                                                <span style={{ fontSize: "0.9em" }}> (+{trainObject.deplate})</span>
                                             </Text>
                                         )
                                     )
                                 }
 
 
-                                {/* Отображение времени отправления */}
-                                {trainObject?.deplate === 'n/a' || trainObject?.deplate === 0 ? (
-                                    trainObject?.depart !== '-' && (
-                                        <Text size="xs" c={trainObject?.actarr === 'n/a' && trainObject?.actdep === 'n/a' ? "default" : "green"}>
-                                            {trainObject.passyet === '1' ? t('departedAt') : t('departsAt')} {trainObject?.depart}
-                                            {trainObject?.actarr === 'n/a' && trainObject?.actdep === 'n/a' && ' ' + t('nodata')}
-                                        </Text>
-                                    )
-                                ) : (
-                                    trainObject?.actdep !== '-' && (
-                                        <Text size="xs" c="#ff0000">
-                                            {trainObject.passyet === '1' ? t('departedAt') : t('departsAt')} {trainObject?.actdep}
-                                            <span style={{ fontSize: "0.9em" }}> (+{trainObject.deplate})</span>
-                                        </Text>
-                                    )
-                                )}
                             </Timeline.Item>
                         ))}
                     </Timeline>
