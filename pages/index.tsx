@@ -36,7 +36,7 @@ i18n.use(initReactI18next)
 // Импорт иконок
 import { FaPersonArrowUpFromLine, FaPersonArrowDownToLine } from "react-icons/fa6";
 import { SiGooglemaps } from "react-icons/si";
-import {IconSun, IconMoon, IconLanguage} from '@tabler/icons-react';
+import {IconSun, IconMoon, IconLanguage, IconBrandGithub} from '@tabler/icons-react';
 import { LuTrainTrack } from "react-icons/lu";
 
 // Импорт списка станций
@@ -253,6 +253,19 @@ export default function MobileNavbar() {
                                 <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
                                 <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />
                             </ActionIcon>
+                            <ActionIcon
+                                component="a"
+                                href="https://github.com/TuskarMA/kmitl_train"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                variant="default"
+                                size="lg"
+                                aria-label="GitHub"
+                            >
+                                <IconBrandGithub size={18} />
+                            </ActionIcon>
+
+
 
                         </Group>
                     </Group>

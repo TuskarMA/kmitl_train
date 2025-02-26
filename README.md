@@ -1,5 +1,6 @@
-# Mantine Next Template
+# KMITL-BKK
+Website created for all KMITL students who are using trains to travel between KMITL and Bangkok.
 
-Get started with the template by clicking `Use this template` button on the top of the page.
+Original SRT website is not user-friendly and hard to use. This website is created to help students to find the best train for them.
 
-[Documentation](https://mantine.dev/guides/next/)
+Feel free to contribute to this project by PR's and Issues.
